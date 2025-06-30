@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'font-regular';
+  src: url('../font/VelaSans-Regular.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'font-bold';
+  src: url('../font/VelaSans-Bold.woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font-semibold';
+  src: url('../font/VelaSans-SemiBold.woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'font-extrabold';
+  src: url('../font/VelaSans-ExtraBold.woff');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'font-light';
+  src: url('../font/VelaSans-Light.woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTSuper_font-regular';
+  src: url('../font/GT-Super-Display-Medium.woff2');
+  font-weight: normal;
+  font-style: normal;
+}

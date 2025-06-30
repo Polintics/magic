@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magic</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./img/star.svg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.139.0/build/three.module.js",
+          "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.139.0/examples/jsm/controls/OrbitControls.js",
+          "GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.139.0/examples/jsm/loaders/GLTFLoader.js",
+          "RectAreaLightUniformsLib": "https://cdn.jsdelivr.net/npm/three@0.139.0/examples/jsm/lights/RectAreaLightUniformsLib.js"
+        }
+      }
+    </script>
+    <script type="module" src="model.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <a href="./index.html"><div class="logo"></div></a>
+      <div class="text">
+        <a href="index.html" class="nav-link" data-page="index.html"
+          >лаборатория</a
+        >
+        <a href="merch.html" class="nav-link" data-page="merch.html">мерч</a>
+        <a href="event.html" class="nav-link" data-page="event.html">афиша</a>
+        <a href="about.html" class="nav-link" data-page="about.html"
+          >о проекте</a
+        >
+      </div>
+      <a href="./404.html">
+        <div class="basket"></div>
+      </a>
+    </div>
+
+    <div class="model-wrapper">
+  <div class="model-overlay">
+    <p class="text_model">Эта 3D-сфера — символ целостности, внутреннего видения и бесконечного движения. Она создана как цифровой артефакт в рамках моего исследования магии: как форма, в которой сливаются ощущение покоя и сила трансформации.</p>
+  </div>
+  <div class="model">
+  </div>
+</div>
+
+    <!-- Купить книгу -->
+    <div class="buy_book">
+      <div class="pic1"></div>
+      <div class="describe">
+        <h1>Книга о пространстве LAB</h1>
+        <br /><br />
+        <p class="des1">
+          Книга о пространстве лаборатории. Инновационные разработки и магия. Слияние разных миров, исследуемых в рамках проекта. Каждый элемент здания отражает логику и смысл его внутренней структуры. Форма, материалы и навигация объединены в единую систему, раскрывающую процесс исследований.
+        </p>
+        <br />
+         <a href="https://portfolio.hse.ru/Project/250179" class="learnmore">Узнать больше</a>
+      </div>
+      <divc class="price-container">
+      <div class="price">
+        <div class="plus">
+        </div>
+        <div class="money">
+          <p>₽ 2000</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Листать книгу -->
+    <div class="block_book">
+      <div class="arrow_1"></div>
+      <div class="book"></div>
+      <div class="arrow_2"></div>
+    </div>
+
+    <!-- подвал -->
+    <div class="basement">
+      <p class="name">Дизайн и код <br />Polintics</p>
+      <div class="logo_2"></div>
+      <div class="text_2">
+        <a href="about.html">лаборатория</a>
+        <a href="merch.html">мерч</a>
+        <a href="event.html">афиша</a>
+        <a href="event.html">о проекте</a>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="./js.js"></script>
+</html>
