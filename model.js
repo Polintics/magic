@@ -16,17 +16,15 @@ function initThree() {
   scene.position.set(-8, -3, 0);
 
   // Камера
-  const camera = new THREE.PerspectiveCamera(
-    55,
-    window.innerWidth / window.innerHeight,
-    0.14,
-    3000
-  );
+  const width = model.clientWidth;
+  const height = model.clientHeight;
+
+  const camera = new THREE.PerspectiveCamera(55, width / height, 0.14, 3000);
   camera.position.set(0, 0, 50);
 
   // Рендер
   const renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(width, height);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   model.appendChild(renderer.domElement);
@@ -79,8 +77,8 @@ function initThree() {
   window.addEventListener('resize', onWindowResize);
 
   function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(width, height);
   }
 }
