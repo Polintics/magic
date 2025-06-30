@@ -445,13 +445,13 @@ h2 {
   background-image: url('../img/item1.png');
 }
 .item2 {
-  background-image: url('../img/item2.png');
+  background-image: url('../img/cube.svg');
 }
 .item3 {
-  background-image: url('../img/item3.png');
+  background-image: url('../img/plate.svg');
 }
 .item4 {
-  background-image: url('../img/item4.png');
+  background-image: url('../img/item2.png');
 }
 
 /* афиша */
