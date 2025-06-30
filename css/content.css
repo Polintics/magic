@@ -10,8 +10,56 @@ body {
   height: 18vh;
   background-color: white;
   display: grid;
-  grid-template-columns: 20% 65% 15%;
+  grid-template-columns: 20% 65% 15% 0%;
 }
+.burger {
+  display: flex;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+.burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #000000;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
 
 .header > a:first-child {
   display: flex;
@@ -19,12 +67,14 @@ body {
 }
 
 .logo {
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('../img/logotype.svg');
-  width: 15vw;
-  height: 9vh;
+  width: 18vw;
+  height: 10vh;
   margin-top: 2vh;
+  margin-left: 2vw;
 }
 
 .basket {
@@ -91,16 +141,17 @@ h2 {
 .model-overlay {
   position: absolute;
   margin-left: 64%;
-  margin-top: 5%;
+  margin-top: -40%;
   width: 30vw;
   height: 14vw;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(222, 222, 222, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 24px;
   pointer-events: none;
+  z-index: 1000;
 }
 
 .text_model {
@@ -172,7 +223,7 @@ h2 {
 .buy_book {
   display: grid;
   grid-template-columns: 35% 50% 15%;
-  margin-top: 10%;
+  margin-top: 20%;
   height: 40vw;
 }
 
@@ -479,6 +530,7 @@ h2 {
 
 body.dark {
   background-color: black;
+  cursor: auto;
 }
 
 body.dark a,
@@ -494,8 +546,9 @@ body.dark .logo,
 body.dark .logo_2 {
   background-image: url('../img/logotype_dark.svg');
 }
-
-.logo,
+body.dark .burger {
+  background-image: url('../img/burgerwhite.svg');
+}
 .logo_2 {
   background-image: url('../img/logotype.svg');
   background-size: contain;
