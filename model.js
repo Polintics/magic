@@ -31,21 +31,7 @@ function initThree() {
 
   // Загрузка модели
   const loader = new GLTFLoader();
-  loader.load(
-    './model/iwanttodie.glb',
-    function (gltf) {
-      gltf.scene.traverse((child) => {
-        if (child.isMesh) {
-          console.log(child.name, child.material);
-        }
-      });
-      scene.add(gltf.scene);
-    },
-    undefined,
-    function (error) {
-      console.log('Error:', error);
-    }
-  );
+  loader.load('./model/iwanttodie.glb');
 
   // Свет
   const light1 = new THREE.DirectionalLight(0xeeece9, 1);
